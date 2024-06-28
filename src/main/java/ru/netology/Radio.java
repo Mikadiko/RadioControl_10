@@ -5,6 +5,18 @@ public class Radio {
     private int radioStationNumber; // номер радиостанции
     private int maxRadioStation; // желаемое количество радиостанций
 
+
+
+    public Radio() { // для отображения количества станций по умолчанию
+        this.maxRadioStation = 9;
+    }
+
+    public Radio(int desiredNumberOfRadioStations) { //принимает желаемое количество радиостанций и сохраняет это значение у себя в поле
+        this.maxRadioStation = desiredNumberOfRadioStations - 1;
+    }
+
+
+
     public int getMaxRadioStation() { //получение данных о желаемом количестве радиостанций
         return maxRadioStation;
     }
@@ -17,7 +29,7 @@ public class Radio {
         return radioStationNumber;  // получение данных о номере радиостанции
     }
 
-//.............Для громкости звука.....................
+
 
     public void setCurrentVolume(int newCurrentVolume) { // изменение данных громкости звука
         if (newCurrentVolume < 0) {
@@ -42,15 +54,9 @@ public class Radio {
         }
     }
 
-//...............Для номера радиостанции.....................
 
-    public Radio(int desiredNumberOfRadioStations) { //принимает желаемое количество радиостанций и сохраняет это значение у себя в поле
-        this.maxRadioStation = desiredNumberOfRadioStations - 1;
-    }
 
-    public Radio() { // для отображения количества станций по умолчанию
-        this.maxRadioStation = 9;
-    }
+
 
     public void setRadioStationNumber(int newRadioStationNumber) { // установка данных номера станции
 
