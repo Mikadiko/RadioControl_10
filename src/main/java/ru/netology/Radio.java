@@ -1,34 +1,21 @@
 package ru.netology;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
 public class Radio {
     private int currentVolume;           // громкость звука
     private int radioStationNumber; // номер радиостанции
     private int maxRadioStation; // желаемое количество радиостанций
 
 
-
-    public Radio() { // для отображения количества станций по умолчанию
-        this.maxRadioStation = 9;
-    }
-
     public Radio(int desiredNumberOfRadioStations) { //принимает желаемое количество радиостанций и сохраняет это значение у себя в поле
         this.maxRadioStation = desiredNumberOfRadioStations - 1;
     }
-
-
-
-    public int getMaxRadioStation() { //получение данных о желаемом количестве радиостанций
-        return maxRadioStation;
-    }
-
-    public int getCurrentVolume() { // получение данных о громкости звука
-        return currentVolume;
-    }
-
-    public int getRadioStationNumber() {
-        return radioStationNumber;  // получение данных о номере радиостанции
-    }
-
 
 
     public void setCurrentVolume(int newCurrentVolume) { // изменение данных громкости звука
@@ -53,9 +40,6 @@ public class Radio {
             this.currentVolume--;
         }
     }
-
-
-
 
 
     public void setRadioStationNumber(int newRadioStationNumber) { // установка данных номера станции
